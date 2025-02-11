@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definição das variáveis globais */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* Tema escuro automático baseado na preferência do usuário */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #121212;
+    --foreground: #e0e0e0;
+  }
+}
+
+/* Garante que a cor de fundo e texto sejam aplicadas corretamente */
+html {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Ajuste no body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
