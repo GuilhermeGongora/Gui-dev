@@ -7,16 +7,20 @@ import CTASection from "./components/CTASection";
 
 export default function Home() {
   return (
-    <div className="bg-black-100 dark:bg-black-900 min-h-screen flex flex-col">
+    <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center">
+      {/* Cabeçalho sempre fixo no topo */}
       <Header />
 
-      {/* Conteúdo principal */}
+      {/* Container principal ocupando o espaço total */}
+      <main className="flex flex-col flex-grow justify-center items-center container mx-auto px-4 sm:px-6 lg:px-8">
+        <HeroSection />
+        <Features />
+      </main>
 
-      <HeroSection />
-      <Features />
-
-      {/* Seção CTA adicionada */}
-      <CTASection />
+      {/* Seção CTA fixa na parte inferior */}
+      <div className="mt-auto w-full">
+        <CTASection />
+      </div>
     </div>
   );
 }

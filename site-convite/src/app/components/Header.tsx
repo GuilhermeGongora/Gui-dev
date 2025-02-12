@@ -28,7 +28,7 @@ export default function Header() {
             Início
           </Link>
           <Link
-            href="/sobre"
+            href="/about"
             className="hover:text-slate-300 transition-colors"
           >
             Sobre
