@@ -10,7 +10,7 @@ export default function HeroSection() {
         animate={{ opacity: 10, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        Aprenda TI e IA com qualidade 🚀
+        GE, EU TE AMO MUITO, AMOR!💖💕
       </motion.h1>
       <motion.p
         className="text-2xl font-bold text-white py-10"
