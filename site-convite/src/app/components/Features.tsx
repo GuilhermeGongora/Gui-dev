@@ -18,12 +18,17 @@ export default function Features() {
   ];
 
   return (
-    <section className="py-16 px-8 bg-slate-950 text-white">
-      <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+    <section className="py-16 px-8 bg-black text-white">
+      <motion.div
+        className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto"
+        initial={{ opacity: 0, y: -100 }} // Movimentação inicial maior
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.4, ease: "easeInOut" }} // Duração aumentada e ease mais suave
+      >
         {features.map((feature, index) => (
           <motion.div
             key={index}
-            className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-3xl shadow-xl border border-slate-600 text-center"
+            className="bg-gradient-to-br from-white-800 to-slate-700 p-8 rounded-3xl shadow-xl border border-slate-600 text-center"
             variants={cardVariants}
             initial="hidden"
             animate="visible"
@@ -38,7 +43,7 @@ export default function Features() {
             <p className="text-gray-300 mt-4 text-lg">{feature.description}</p>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
