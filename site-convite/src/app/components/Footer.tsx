@@ -2,7 +2,7 @@ import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-white py-8 mt-0">
+    <footer className="bg-black text-white py-8 mt-0">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
         {/* Logo e Direitos Autorais */}
         <div className="text-center md:text-left">
