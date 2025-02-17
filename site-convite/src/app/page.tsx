@@ -5,23 +5,36 @@ import HeroSection from "./components/HeroSection";
 import Features from "./components/Features";
 import CTASection from "./components/CTASection";
 import Contato from "./contact/page";
+import About from "./about/page";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center">
+    <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center">
       {/* Cabeçalho sempre fixo no topo */}
       <Header />
 
       {/* Container principal ocupando o espaço total */}
       <main className="flex flex-col flex-grow justify-center items-center container mx-auto px-4 sm:px-6 lg:px-8">
-        <HeroSection />
-        <Features />
+        <section
+          id="HeroSection"
+          className="flex flex-col justify-center items-center min-h-screen bg-black text-center p-10"
+        >
+          <HeroSection />
+        </section>
+        <section id="About">
+          <About />
+        </section>
+        <section id="Features">
+          <Features />
+        </section>
       </main>
 
       {/* Seção CTA fixa na parte inferior */}
       <div className="mt-auto w-full">
         <CTASection />
-        <Contato />
+        <section id="Contato">
+          <Contato />
+        </section>
       </div>
     </div>
   );
