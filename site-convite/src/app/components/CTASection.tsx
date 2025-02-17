@@ -10,7 +10,7 @@ export default function CTASection() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="bg-slate-950 text-white py-20 px-6 text-center shadow-lg w-full"
+      className="bg-black text-white py-20 px-6 text-center shadow-lg w-full"
     >
       <motion.h2
         className="text-3xl font-bold mb-4"
