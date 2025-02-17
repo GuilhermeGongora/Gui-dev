@@ -4,12 +4,12 @@ export default function Contato() {
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-slate-900 text-white flex flex-col items-center justify-center">
+      <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center">
         <h1 className="text-4xl font-bold mb-6">Entre em Contato</h1>
         <p className="text-lg text-gray-300 mb-4">
           Preencha o formulário ou envie um e-mail para contato@meusite.com
         </p>
-        <form className="w-full max-w-md bg-slate-800 p-6 rounded-lg shadow-lg">
+        <form className="w-full max-w-md bg-slate-950 p-6 rounded-lg shadow-lg">
           <label className="block mb-2">
             Nome:
             <input
