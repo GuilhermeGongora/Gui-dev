@@ -8,13 +8,13 @@ export default function Sobre() {
     <>
       <Header />
 
-      <div className="min-h-screen bg-slate-900 text-white flex flex-col items-center justify-center p-6 ">
+      <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center p-6 ">
         {/* Imagem animada */}
         <motion.img
           className="w-48 h-48 rounded-full object-cover shadow-lg mb-6 scale-95 hover:scale-120"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+          transition={{ duration: 2, ease: "easeIn" }}
           src="/images/eu.jpg"
           alt="Minha foto"
         />
@@ -27,7 +27,7 @@ export default function Sobre() {
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           <motion.p
-            className="text-lg text-gray-300 selection:bg-fuchsia-300 selection:text-fuchsia-900"
+            className="text-lg text-gray-300 selection:bg-slate-700 selection:text-green-300"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2 }}
