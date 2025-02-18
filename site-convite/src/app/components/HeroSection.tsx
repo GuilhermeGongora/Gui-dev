@@ -5,9 +5,9 @@ import DownloadComponent from "./DownloadComponent";
 
 export default function HeroSection() {
   return (
-    <div className="text-center py-10 bg-black ">
-      <motion.h1
-        className="text-7xl font-bold text-[#00ff00] font-mono my-10"
+    <div className="text-center py-10 bg-black min-h-screen flex flex-col items-center justify-center px-4">
+      <motion.code
+        className="text-5xl md:text-6xl lg:text-7xl font-bold text-[#00ff00] font-mono m-auto my-10 break-all text-center"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -19,14 +19,15 @@ export default function HeroSection() {
           cursorStyle="|"
           typeSpeed={70}
           deleteSpeed={50}
-          cursorColor="#00ff00" // Tailwind green-500
+          cursorColor="#00ff00"
         />
-      </motion.h1>
+      </motion.code>
+
       <motion.h2
-        className="text-4nx1 font-bold text-[#00ff00] py-5 font-mono"
+        className="text-xl md:text-3xl lg:text-4xl font-bold text-[#00ff00] py-5 font-mono"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
       >
         <Typewriter
           words={["Domine os mais diversos assuntos do mundo da tecnologia!"]}
@@ -39,7 +40,9 @@ export default function HeroSection() {
         />
       </motion.h2>
 
-      <DownloadComponent />
+      <div className="mt-6 w-full flex justify-center">
+        <DownloadComponent />
+      </div>
     </div>
   );
 }
