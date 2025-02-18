@@ -9,7 +9,7 @@ import About from "./about/page";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center">
+    <div className="min-h-screen bg-black text-white flex flex-col items-center justify-center overflow-x-hidden">
       {/* Cabeçalho sempre fixo no topo */}
       <Header />
 
@@ -17,7 +17,7 @@ export default function Home() {
       <main className="flex flex-col flex-grow justify-center items-center container mx-auto px-4 sm:px-6 lg:px-8">
         <section
           id="HeroSection"
-          className="flex flex-col justify-center items-center min-h-screen bg-black text-center p-10"
+          className="flex flex-col justify-center items-center min-h-screen bg-black text-center p-10 "
         >
           <HeroSection />
         </section>
