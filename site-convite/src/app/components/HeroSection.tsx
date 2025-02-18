@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import DownloadComponent from "./DownloadComponent";
 
 export default function HeroSection() {
   return (
@@ -38,13 +39,7 @@ export default function HeroSection() {
         />
       </motion.h2>
 
-      <motion.button
-        className="mt-4 bg-black text-[#00ff00] border-2 px-4 py-2 rounded-lg border-solid border-[#00ff00] shadow-md "
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        Download CV
-      </motion.button>
+      <DownloadComponent />
     </div>
   );
 }
