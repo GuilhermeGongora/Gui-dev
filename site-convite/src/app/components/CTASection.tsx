@@ -30,7 +30,7 @@ export default function CTASection() {
         Junte-se a nós e explore as melhores soluções para sua jornada!
       </motion.p>
 
-      <Link href="/signup">
+      <Link href="/workspaces/Gui-dev/site-convite/public/images/eu.jpg">
         <motion.button
           className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition"
           whileHover={{ scale: 1.1 }}
