@@ -57,7 +57,7 @@ export default function Header() {
 
         <nav className="flex space-x-6 text-lg">
           <motion.div whileHover={{ scale: 1.5 }}>
-            <a
+            <Link
               href="/#About"
               onClick={(e) => handleSmoothScroll(e, "#About")}
               className="transition-colors text-[#00ff00] font-mono"
@@ -70,10 +70,10 @@ export default function Header() {
                 deleteSpeed={50}
                 cursorColor="#00ff00" // Tailwind green-500
               />
-            </a>
+            </Link>
           </motion.div>
           <motion.div whileHover={{ scale: 1.5 }}>
-            <a
+            <Link
               href="/#Features"
               onClick={(e) => handleSmoothScroll(e, "#Features")}
               className="hover:text-slate-300 transition-colors font-mono"
@@ -86,10 +86,10 @@ export default function Header() {
                 deleteSpeed={50}
                 cursorColor="#00ff00" // Tailwind green-500
               />
-            </a>
+            </Link>
           </motion.div>
           <motion.div whileHover={{ scale: 1.5 }}>
-            <a
+            <Link
               href="/#Contato"
               onClick={(e) => handleSmoothScroll(e, "#Contact")}
               className="transition-colors text-[#00ff00] font-mono"
@@ -102,7 +102,7 @@ export default function Header() {
                 deleteSpeed={50}
                 cursorColor="#00ff00" // Tailwind green-500
               />
-            </a>
+            </Link>
           </motion.div>
         </nav>
       </div>
