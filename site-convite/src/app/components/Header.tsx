@@ -38,11 +38,16 @@ export default function Header() {
           : "bg-black transition-colors duration-700"
       } text-white py-4 px-6 shadow-md fixed w-full top-0 z-50`}
     >
-      <div className="max-w-9xl mx-auto flex justify-between items-center">
-        <Link href="/">
+      <div className="max-w-9xl mx-auto flex justify-between items-center space-x-1 md:px-44 lg:px-60 px-2">
+        <Link
+          href="/#HeroSection"
+          onClick={(e) => handleSmoothScroll(e, "#HeroSection")}
+          className="transition-colors text-[#00ff00] font-mono"
+        >
           <motion.div
             whileHover={{ scale: 1.1 }}
-            className="text-2xl font-bold cursor-pointer text-[#00ff00]"
+            className="relative text-[#00ff00] text-2xl font-mono font-bold transition-colors before:absolute before:bottom-0 before:left-0
+              before:w-0 before:h-[2px] before:bg-[#00ff00] before:transition-all before:duration-300 hover:before:w-full"
           >
             <Typewriter
               words={["Guilherme Gongora"]}
@@ -55,53 +60,47 @@ export default function Header() {
           </motion.div>
         </Link>
 
-        <nav className="flex space-x-6 text-lg">
+        <nav className="flex space-x-6 text-lg mt-auto gap-5">
           <motion.div whileHover={{ scale: 1.5 }}>
             <Link
               href="/#About"
               onClick={(e) => handleSmoothScroll(e, "#About")}
-              className="transition-colors text-[#00ff00] font-mono"
+              className="relative text-[#00ff00] font-mono 
+              transition-colors before:absolute before:bottom-0 
+              before:left-0 before:w-0 before:h-[2px] before:bg-[#00ff00] before:transition-all before:duration-300 hover:before:w-full"
             >
-              <Typewriter
-                words={["Sobre"]}
-                loop={1}
-                cursor
-                cursorStyle="|"
-                deleteSpeed={50}
-                cursorColor="#00ff00" // Tailwind green-500
-              />
+              <code>Sobre</code>
             </Link>
           </motion.div>
           <motion.div whileHover={{ scale: 1.5 }}>
             <Link
               href="/#Features"
               onClick={(e) => handleSmoothScroll(e, "#Features")}
-              className="hover:text-slate-300 transition-colors font-mono"
+              className="relative text-[#00ff00] font-mono transition-colors before:absolute before:bottom-0 before:left-0 before:w-0 
+               before:h-[2px] before:bg-[#00ff00] before:transition-all before:duration-300 hover:before:w-full"
             >
-              <Typewriter
-                words={["Sobre"]}
-                loop={1}
-                cursor
-                cursorStyle="|"
-                deleteSpeed={50}
-                cursorColor="#00ff00" // Tailwind green-500
-              />
+              <code>Sobre</code>
             </Link>
           </motion.div>
           <motion.div whileHover={{ scale: 1.5 }}>
             <Link
-              href="/#Contato"
-              onClick={(e) => handleSmoothScroll(e, "#Contact")}
-              className="transition-colors text-[#00ff00] font-mono"
+              href="/#Features"
+              onClick={(e) => handleSmoothScroll(e, "#Features")}
+              className="relative text-[#00ff00] font-mono transition-colors before:absolute before:bottom-0 
+               before:left-0 before:w-0 before:h-[2px] before:bg-[#00ff00] before:transition-all before:duration-300 hover:before:w-full"
             >
-              <Typewriter
-                words={["Contato"]}
-                loop={1}
-                cursor
-                cursorStyle="|"
-                deleteSpeed={50}
-                cursorColor="#00ff00" // Tailwind green-500
-              />
+              <code>Sobre</code>
+            </Link>
+          </motion.div>
+
+          <motion.div whileHover={{ scale: 1.5 }}>
+            <Link
+              href="/#contact"
+              onClick={(e) => handleSmoothScroll(e, "#Contact")}
+              className="relative text-[#00ff00] font-mono transition-colors before:absolute before:bottom-0 before:left-
+                before:w-0 before:h-[2px] before:bg-[#00ff00] before:transition-all before:duration-300 hover:before:w-full"
+            >
+              <code>Contato</code>
             </Link>
           </motion.div>
         </nav>
