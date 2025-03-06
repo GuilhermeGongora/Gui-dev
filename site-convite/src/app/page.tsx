@@ -2,7 +2,7 @@
 
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
-import Features from "./components/Features";
+import Features from "./components/Skills";
 import CTASection from "./components/CTASection";
 import Contato from "./contact/page";
 import About from "./about/page";
@@ -32,7 +32,7 @@ export default function Home() {
       {/* Seção CTA fixa na parte inferior */}
       <div className="mt-auto w-full">
         <CTASection />
-        <section id="Contato">
+        <section id="Contact">
           <Contato />
         </section>
       </div>
