@@ -29,7 +29,7 @@ export default function Contato() {
             <textarea
               rows={4}
               className="w-full p-2 mt-1 rounded bg-slate-700 text-white border border-slate-600 focus:border-white focus:ring-1 focus:ring-white"
-            ></textarea>
+            />
           </label>
           <button
             type="submit"
