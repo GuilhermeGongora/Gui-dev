@@ -1,49 +1,121 @@
+import {
+  FaJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaNodeJs,
+  FaDocker,
+  FaGitAlt,
+  FaGithub,
+} from "react-icons/fa";
+import {
+  SiTypescript,
+  SiJest,
+  SiNextdotjs,
+  SiPostgresql,
+  SiTailwindcss,
+  SiPython,
+} from "react-icons/si";
+
 import { motion } from "framer-motion";
 
-const cardVariants = {
-  hidden: { opacity: 0, scale: 0.8, y: 20 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
+// Lista de habilidades com ícones e nomes
+const skills = [
+  {
+    id: "react",
+    icon: <FaReact size={70} className="text-blue-400" />,
+    description: "React",
   },
-};
+  {
+    id: "javascript",
+    icon: <FaJs size={70} className="text-yellow-400" />,
+    description: "JavaScript",
+  },
+  {
+    id: "typescript",
+    icon: <SiTypescript size={70} className="text-blue-500" />,
+    description: "TypeScript",
+  },
+  {
+    id: "docker",
+    icon: <FaDocker size={70} className="text-blue-500" />,
+    description: "Docker",
+  },
+  {
+    id: "python",
+    icon: <SiPython size={70} className="text-yellow-300" />,
+    description: "Python",
+  },
+  {
+    id: "jest",
+    icon: <SiJest size={70} className="text-red-500" />,
+    description: "Jest",
+  },
+  {
+    id: "nodejs",
+    icon: <FaNodeJs size={70} className="text-green-500" />,
+    description: "Node.js",
+  },
+  {
+    id: "nextjs",
+    icon: <SiNextdotjs size={70} className="text-white" />,
+    description: "Next.js",
+  },
+  {
+    id: "html5",
+    icon: <FaHtml5 size={70} className="text-orange-500" />,
+    description: "HTML5",
+  },
+  {
+    id: "css3",
+    icon: <FaCss3Alt size={70} className="text-blue-400" />,
+    description: "CSS3",
+  },
+  {
+    id: "postgresql",
+    icon: <SiPostgresql size={70} className="text-blue-500" />,
+    description: "PostgreSQL",
+  },
+  {
+    id: "tailwind",
+    icon: <SiTailwindcss size={70} className="text-cyan-400" />,
+    description: "Tailwind CSS",
+  },
+  {
+    id: "git",
+    icon: <FaGitAlt size={70} className="text-orange-500" />,
+    description: "Git",
+  },
+  {
+    id: "github",
+    icon: <FaGithub size={70} className="text-white" />,
+    description: "GitHub",
+  },
+];
 
-export default function Features() {
-  const features = [
-    {
-      id: "feature1",
-      title: "Rápido",
-      description: "Carregamento otimizado e suave.",
-    },
-    {
-      id: "feature2",
-      title: "Responsivo",
-      description: "Funciona em qualquer dispositivo.",
-    },
-    {
-      id: "feature3",
-      title: "Interativo",
-      description: "Experiência dinâmica e envolvente.",
-    },
-  ];
-
+// Exibição dos cards
+export default function Skills() {
   return (
-    <section className="py-16 px-8 bg-black text-white">
-      <motion.div
-        className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto"
-        initial={{ opacity: 0, y: -100 }} // Movimentação inicial maior
+    <section className="flex flex-col bg-black text-white px-4 py-10">
+      <motion.h1
+        className="text-center text-5xl font-bold mb-8"
+        initial={{ opacity: 0, y: -100 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.4, ease: "easeInOut" }} // Duração aumentada e ease mais suave
+        transition={{ duration: 1.4, ease: "easeInOut" }}
       >
-        {features.map((feature) => (
+        print(Habilidades)
+      </motion.h1>
+
+      <motion.div
+        className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 max-w-6xl mx-auto"
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.4, ease: "easeInOut" }}
+      >
+        {skills.map((skill) => (
           <motion.div
-            key={feature.id}
-            className="bg-gradient-to-br from-white-800 to-slate-700 p-8 rounded-3xl shadow-xl border border-slate-600 text-center"
-            variants={cardVariants}
-            initial="hidden"
-            animate="visible"
+            key={skill.id}
+            className="bg-gray-800 w-24 h-28 rounded-xl shadow-xl border border-slate-600 flex flex-col items-center justify-center"
             whileHover={{
               scale: 1.1,
               y: -5,
@@ -51,8 +123,10 @@ export default function Features() {
               transition: { duration: 0.3 },
             }}
           >
-            <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
-            <p className="text-gray-300 mt-4 text-lg">{feature.description}</p>
+            {skill.icon}
+            <p className="text-xs text-center text-light-secondary dark:text-dark-primary mt-2">
+              {skill.description}
+            </p>
           </motion.div>
         ))}
       </motion.div>
