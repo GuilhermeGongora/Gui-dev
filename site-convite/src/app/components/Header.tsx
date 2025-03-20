@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Typewriter } from "react-simple-typewriter";
 
 export default function Header() {
   const [scrolling, setScrolling] = useState(false);
