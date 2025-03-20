@@ -9,7 +9,7 @@ export default function Sobre() {
     <>
       <Header />
 
-      <div className="min-h-screen px-5 bg-black text-[#00ff00] flex flex-col md:flex-row items-center justify-center p-6">
+      <div className="min-h-screen  bg-black text-[#00ff00] flex flex-col md:flex-row items-center justify-center ">
         {/* Imagem animada */}
         <motion.div className="flex flex-col items-center justify-center p- font-mono">
           <motion.img
