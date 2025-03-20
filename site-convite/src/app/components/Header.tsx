@@ -49,14 +49,7 @@ export default function Header() {
             className="relative text-[#00ff00] text-2xl font-mono font-bold transition-colors before:absolute before:bottom-0 before:left-0
               before:w-0 before:h-[2px] before:bg-[#00ff00] before:transition-all before:duration-300 hover:before:w-full"
           >
-            <Typewriter
-              words={["Guilherme Gongora"]}
-              loop={1}
-              cursor
-              cursorStyle="|"
-              deleteSpeed={50}
-              cursorColor="#00ff00" // Tailwind green-500
-            />
+            <motion.h1>Guilherme Gongora</motion.h1>
           </motion.div>
         </Link>
 
@@ -76,7 +69,7 @@ export default function Header() {
             <Link
               href="/#Features"
               onClick={(e) => handleSmoothScroll(e, "#Features")}
-              className="relative text-[#00ff00] font-mono transition-colors before:absolute before:bottom-0 before:left-0 before:w-0 
+              className="relative text-[#00AEEF] font-mono transition-colors before:absolute before:bottom-0 before:left-0 before:w-0 
                before:h-[2px] before:bg-[#00ff00] before:transition-all before:duration-300 hover:before:w-full"
             >
               <code>Sobre</code>
