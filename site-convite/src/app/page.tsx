@@ -2,7 +2,7 @@
 
 import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
-import Features from "./components/Skills";
+import Skills from "../app/components/Skills";
 import CTASection from "./components/CTASection";
 import Contato from "./contact/page";
 import About from "./about/page";
@@ -17,7 +17,7 @@ export default function Home() {
       <main className="flex flex-col flex-grow justify-center items-center container mx-auto px-4 sm:px-6 lg:px-8">
         <section
           id="HeroSection"
-          className="flex flex-col justify-center items-center min-h-screen bg-black text-center p-10 "
+          className="flex flex-col justify-center items-center min-h-screen bg-black text-center "
         >
           <HeroSection />
         </section>
@@ -25,7 +25,7 @@ export default function Home() {
           <About />
         </section>
         <section id="Features">
-          <Features />
+          <Skills />
         </section>
       </main>
 
